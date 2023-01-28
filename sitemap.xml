@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://makura-zero.github.io/posts/86ad6a21.html</loc>
+    
+    <lastmod>2023-01-28</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://makura-zero.github.io/posts/b7f5efba.html</loc>
     
     <lastmod>2023-01-27</lastmod>
@@ -49,7 +58,7 @@
 
   <url>
     <loc>https://makura-zero.github.io/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-01-28</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -59,7 +68,7 @@
   
   <url>
     <loc>https://makura-zero.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-01-27</lastmod>
+    <lastmod>2023-01-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
