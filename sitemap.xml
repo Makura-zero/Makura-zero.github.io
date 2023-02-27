@@ -2,6 +2,42 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://makura-zero.github.io/posts/bd0e7455.html</loc>
+    
+    <lastmod>2023-02-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://makura-zero.github.io/posts/c121ad9d.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://makura-zero.github.io/posts/d0eda161.html</loc>
+    
+    <lastmod>2023-02-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://makura-zero.github.io/posts/1fa180ce.html</loc>
+    
+    <lastmod>2023-02-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://makura-zero.github.io/posts/9fd98a15.html</loc>
     
     <lastmod>2023-02-02</lastmod>
@@ -47,15 +83,6 @@
   </url>
   
   <url>
-    <loc>https://makura-zero.github.io/posts/d87f7e0c.html</loc>
-    
-    <lastmod>2023-01-27</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://makura-zero.github.io/link/index.html</loc>
     
     <lastmod>2023-01-25</lastmod>
@@ -76,17 +103,24 @@
 
   <url>
     <loc>https://makura-zero.github.io/</loc>
-    <lastmod>2023-02-02</lastmod>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
 
   
+  <url>
+    <loc>https://makura-zero.github.io/tags/Python/</loc>
+    <lastmod>2023-02-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
 
   
   <url>
-    <loc>https://makura-zero.github.io/categories/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2023-02-02</lastmod>
+    <loc>https://makura-zero.github.io/categories/src/</loc>
+    <lastmod>2023-02-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
