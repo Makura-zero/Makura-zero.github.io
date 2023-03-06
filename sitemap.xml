@@ -2,6 +2,33 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://makura-zero.github.io/posts/21d474c5.html</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://makura-zero.github.io/posts/d0eda161.html</loc>
+    
+    <lastmod>2023-03-06</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://makura-zero.github.io/posts/1fa180ce.html</loc>
+    
+    <lastmod>2023-02-27</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://makura-zero.github.io/posts/bd0e7455.html</loc>
     
     <lastmod>2023-02-27</lastmod>
@@ -13,25 +40,7 @@
   <url>
     <loc>https://makura-zero.github.io/posts/c121ad9d.html</loc>
     
-    <lastmod>2023-02-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://makura-zero.github.io/posts/d0eda161.html</loc>
-    
-    <lastmod>2023-02-18</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://makura-zero.github.io/posts/1fa180ce.html</loc>
-    
-    <lastmod>2023-02-06</lastmod>
+    <lastmod>2023-02-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -103,7 +112,7 @@
 
   <url>
     <loc>https://makura-zero.github.io/</loc>
-    <lastmod>2023-02-27</lastmod>
+    <lastmod>2023-03-06</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -111,7 +120,14 @@
   
   <url>
     <loc>https://makura-zero.github.io/tags/Python/</loc>
-    <lastmod>2023-02-27</lastmod>
+    <lastmod>2023-03-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://makura-zero.github.io/tags/waf/</loc>
+    <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
@@ -120,7 +136,7 @@
   
   <url>
     <loc>https://makura-zero.github.io/categories/src/</loc>
-    <lastmod>2023-02-27</lastmod>
+    <lastmod>2023-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
